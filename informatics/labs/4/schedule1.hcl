@@ -9,7 +9,7 @@ schedule {
         audience = 1410
       }
       time = {
-        start = "8:10"
+        start = "8:1
         finish = "9:40"
       }
     },

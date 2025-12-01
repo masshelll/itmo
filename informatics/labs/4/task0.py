@@ -26,7 +26,7 @@ def reading():
                     i += 1
                 token.append(stroka)
                 if i < len(hcl_content):
-                    i += 1  #Перешагиваем закрывающую кавычку
+                    i += 1
                 continue
             if this_i.isalnum() or this_i in ['-', '_', '.']:
                 word = ""
@@ -38,8 +38,6 @@ def reading():
         return token
 
 reading()
-tokens = reading()
-print(tokens)
 def parsing(token):
     dict = {}
     while len(token) > 0:
@@ -74,7 +72,6 @@ def parsing(token):
                 dict[key] = n_block
             else:
                 value = token.pop(0)
-                #для чисел в строчке isdigital()
                 if value.isdigit():
                     value = int(value)
                 dict[key] = value

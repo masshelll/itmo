@@ -1,5 +1,4 @@
-schedule {
-  lesson = [
+schedule {lesson = [
     {
       title   = "История России и мира в ХХ веке"
       format  = "Лекция"
