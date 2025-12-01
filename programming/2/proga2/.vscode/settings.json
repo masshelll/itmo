@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": [
+        "."
+    ],
+    "java.project.referencedLibraries": [
+        "c:\\Users\\ms178\\Desktop\\proga2\\Noivern.jar",
+        "c:\\Users\\ms178\\Desktop\\proga2\\DragonPulse.jar",
+        "c:\\Users\\ms178\\Desktop\\proga2\\Pokemon.jar"
+    ]
+}
