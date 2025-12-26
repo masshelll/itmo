@@ -55,6 +55,8 @@ public class Main {
         girl.react(winston);
         child.react(winston);
 
+        System.out.println(winston);
+
 
     }
 }

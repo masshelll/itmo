@@ -1,6 +1,9 @@
 import Enum.TimeOfDay;
 import Enum.Time;
 import Error.*;
+
+import java.util.Objects;
+
 public class Person {
     private String name;
     private boolean inParty;
@@ -89,5 +92,26 @@ public class Person {
         System.out.println(name + " спит");
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return inParty == person.inParty && Objects.equals(name, person.name);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, inParty);
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", inParty=" + inParty +
+                ", isAlone=" + isAlone +
+                ", suspicionScore=" + suspicionScore +
+                ", currentPlace=" + currentPlace.name +
+                '}';
+    }
 }
