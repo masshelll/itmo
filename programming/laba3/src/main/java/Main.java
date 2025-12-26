@@ -7,15 +7,18 @@ public class Main {
         Person winston = new Person("Уинстон", true);
         Ministry ministryOfTrue = new Ministry("Министерство", "Министерство правды", 2000, CardinalDirection.NORTH);
         CommunityCentre centre = new CommunityCentre("Общественный Центр", 500, "шумное место", CardinalDirection.SOUTH);
-        ministryOfTrue.enter(winston);
         //coffee and memory
         House house = new House("Дом", 100, "какой то", CardinalDirection.EAST, "", false, 3);
         Entrance entrance = house.getEntrance();
         Coffee realCoffe = new Coffee("Настоящий");
+        Coffee victoryCoffe = new Coffee("Победа");
         Smell coffeeSmell = realCoffe.getSmell();
+        Smell victoryCoffeeSmell = victoryCoffe.getSmell();
+        coffeeSmell.setSecondDescription(victoryCoffeeSmell);
         entrance.setSmell(coffeeSmell);
-        winston.go(house, 0, true, TimeOfDay.EVENING);
-        Memory childMemory = new Memory(true, "мир детства");
+        entrance.spreadSmell();
+        winston.stay();
+        Memory childMemory = new Memory(true, "мир своего детства");
         winston.remember(childMemory, Time.MOMENT);
         Door door = entrance.getDoor();
         entrance.slamDoor(10);
@@ -54,8 +57,6 @@ public class Main {
         fatWoman.speak();
         girl.react(winston);
         child.react(winston);
-
-        System.out.println(winston);
 
 
     }

@@ -53,6 +53,10 @@ public class Person {
         if (distance > 2) {
             body.getLeg().pulsate(true);
         }
+
+        if (isAlone) {
+            Party.getInstance().considerSuspicion(this, "Прогулка в одиночестве", 10);
+        }
         return true;
     }
 
@@ -81,7 +85,7 @@ public class Person {
     }
 
     public void stay() {
-        System.out.println(name + "стоит");
+        System.out.println(name + " невольно остановился");
     }
 
     public void work() {

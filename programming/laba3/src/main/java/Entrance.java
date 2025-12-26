@@ -14,9 +14,16 @@ public class Entrance {
     }
     public void setSmell(Smell smell) {
         this.smell = smell;
+
     }
     public Door getDoor() {
         return door;
+    }
+
+    public void spreadSmell() {
+        if (smell != null) {
+            System.out.println("Из какого то подъезда пахло " + smell.getDescription());
+        }
     }
 
     public void slamDoor(int force) {
