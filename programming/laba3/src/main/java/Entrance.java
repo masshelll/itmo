@@ -1,3 +1,4 @@
+import Enum.Time;
 public class Entrance {
     private Smell smell;
     private String color;
@@ -6,7 +7,7 @@ public class Entrance {
     public Entrance() {
         this.color = "Темный";
         this.smell = null;
-        this.door = new Door(true, this);
+        this.door = new Door(true);
     }
     public Smell getSmell() {
         return smell;
@@ -16,6 +17,13 @@ public class Entrance {
     }
     public Door getDoor() {
         return door;
+    }
+
+    public void slamDoor(int force) {
+        boolean isDoorSlammed = door.close(force);
+        if (isDoorSlammed && smell != null) {
+            smell.dissipate(Time.MOMENT);
+        }
     }
 
 }

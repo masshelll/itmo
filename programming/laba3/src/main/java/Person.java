@@ -1,5 +1,6 @@
 import Enum.TimeOfDay;
 import Enum.Time;
+import Error.*;
 public class Person {
     private String name;
     private boolean inParty;
@@ -58,17 +59,18 @@ public class Person {
         }
     }
 
-    public void writeInBook(Book book, String text) {
+    public void writeInBook(Book book, String text) throws DiaryException {
        if (book == null) {
-            System.out.println(name + " не может написать в книгу, так как ее нет");
-            return;
-            //TODO исключения!
+            throw new DiaryException("Дневника нет");
        }
        book.addContent(text);
     }
 
     public void addSuspicion(int score) {
         this.suspicionScore += score;
+        if (this.suspicionScore >= 100) {
+            throw new SuspicionException(name + " будет стерт!");
+        }
     }
 
     public void eat(Food food) {

@@ -1,11 +1,9 @@
 import Enum.Time;
 public class Door implements Openable{
     private boolean isOpen;
-    private Entrance entrance;
 
-    public Door(boolean isOpen, Entrance entrance) {
+    public Door(boolean isOpen) {
         this.isOpen = true;
-        this.entrance = entrance;
     }
 
     @Override
@@ -21,16 +19,14 @@ public class Door implements Openable{
     public boolean isOpen() {
         return isOpen;
     }
-    public void close(int force) {
+    public boolean close(int force) {
         this.isOpen = false;
         if (force >= 5) {
             System.out.println("Дверь хлопнула");
-            Smell currentSmell = entrance.getSmell();
-            if (currentSmell != null) {
-                currentSmell.dissipate(Time.MOMENT);
-            }
+            return true;
         } else {
             System.out.println("Дверь закрылась");
+            return false;
         }
     }
 }
