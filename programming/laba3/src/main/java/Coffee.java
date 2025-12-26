@@ -22,4 +22,9 @@ public class Coffee extends Food{
         }
         return resultSmell;
     }
+
+    @Override
+    public void consume() {
+        System.out.println("Выпит " + this.name + " кофе");
+    }
 }

@@ -1,4 +1,4 @@
-public class Food {
+public abstract class Food {
     private String typeFood;
 
     public Food(String typeFood) {
@@ -16,4 +16,7 @@ public class Food {
     public void setSmell(String typeFood) {
         this.typeFood = typeFood;
     }
+
+    public abstract void consume();
+
 }
