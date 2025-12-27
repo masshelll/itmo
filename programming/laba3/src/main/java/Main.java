@@ -68,9 +68,10 @@ public class Main {
         Prole guy = new Prole("Парень ", 20, "льнущий к ней");
         Prole fatWoman = new Prole("Баба ", 45, "толстая, с красными руками, переваливающаяся с ноги на ногу");
         Prole oldMan = new Prole("Старик ", 70, "шаркающий на неуклюжих ногах");
-        Prole child = new Prole("Ребенок ", 8, "оборванный, босой");
+        Prole child = new Prole("Ребенок ", 8, "оборванный, босой ");
         child.playInPuddle(puddle);
-        System.out.println(guy.getName() + "и " + oldMan.getName() + "были в толпе.");
+        guy.beInCrowd();
+        oldMan.beInCrowd();
         fatWoman.speak();
         girl.react(winston);
         child.react(winston);
