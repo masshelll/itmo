@@ -24,19 +24,25 @@ public class Main {
         entrance.slamDoor(10);
         Smell smellAfterClose = entrance.getSmell();
         //walking, pain in leg
-        winston.go(centre, 5, true, TimeOfDay.EVENING);
+        Place bridge = new Place("мостовым", 3, "", CardinalDirection.WEST);
+        winston.go(bridge, 5, true, TimeOfDay.EVENING);
         //politics, nature
+        winston.doAction("Второй раз пропускает вечер в Общественном центре");
+        winston.think("Очень опрометчивый поступок, конечно же, кто-нибудь обязательно проверяет посещаемость.");
         try {
-            party.considerSuspicion(winston, "Второй раз пропускает вечер в Общественном центре", 15);
+            party.considerSuspicion(winston, "пропустил вечер", 15);
         } catch (SuspicionException e) {
             System.out.println("Пиф-паф");
             System.out.println("Симуляция закончена.");
             return;
         }
+        winston.aboutPartyRules();
         Nature nature = new Nature(" воздух", "нежный апрельский");
+        Nature sky = new Nature(" небо", " такое голубое, каким он еще не видел его в этом гооду");
         nature.impress(winston);
+        Place busStop = new Place("автобусной остановки", 3, "", CardinalDirection.NORTH);
         Place street = new Place("Лабиринт улиц", 10000, "лондонский", CardinalDirection.NORTH);
-        winston.go(street, 1, true, TimeOfDay.EVENING);
+        winston.go(street, 1, false, TimeOfDay.EVENING);
         //Book
         Book diary = new Book();
         try {

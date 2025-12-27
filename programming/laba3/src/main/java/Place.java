@@ -20,12 +20,10 @@ public class Place {
 
     public void enter(Person person) {
         peopleInPlace.add(person);
-        System.out.println(person.getName() + " вошел в " + name);
     }
 
     public void exit(Person person) {
         peopleInPlace.remove(person);
-        System.out.println(person.getName() + " вышел из " + name);
     }
 
     public boolean isCrowded() {

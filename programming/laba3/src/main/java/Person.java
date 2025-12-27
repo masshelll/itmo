@@ -46,15 +46,15 @@ public class Person {
         this.currentPlace = destination;
         this.isAlone = isAlone;
         this.currentPlace.enter(this);
-
-        System.out.println(name + " идет в " + destination.getName() + " на " + distance + " километров");
-
         //pain in leg
-        if (distance > 2) {
-            body.getLeg().pulsate(true);
+        if (distance > 0) {
+            System.out.print(name + " прошагал по " + destination.getName() + " " + distance + " километров");
+            if (distance > 2) {
+                body.getLeg().pulsate(true);
+            }
         }
-
         if (isAlone) {
+            System.out.println("Делать что-нибудь в одиночку почти всегда считалось подозрительным");
             Party.getInstance().considerSuspicion(this, "Прогулка в одиночестве", 10);
         }
         return true;
@@ -62,7 +62,7 @@ public class Person {
 
     public void remember(Memory memory, Time time) {
         if (time == Time.MOMENT) {
-            System.out.println(name + " перенесся в" + memory.getDescription());
+            System.out.println(name + " оказался в " + memory.getDescription());
         }
     }
 
@@ -86,6 +86,19 @@ public class Person {
 
     public void stay() {
         System.out.println(name + " невольно остановился");
+    }
+
+    public void think(String thought) {
+        System.out.println(name + " подумал: " + thought);
+    }
+
+    public void aboutPartyRules() {
+        System.out.println("В принципе у члена Партии не могло быть свободного времени, и он никогда не оставался наедине с собой.");
+        System.out.println("Предполагалось, что, если член Партии не занят работой или сном, он участвует в коллективном отдыхе.");
+    }
+
+    public void doAction(String actionDescription) {
+        System.out.println(actionDescription + ".");
     }
 
     public void work() {

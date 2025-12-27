@@ -35,7 +35,7 @@ public class Smell {
 
     public String getDescription() {
         if (secondDescription != null) {
-            return description + " не " + secondDescription;
+            return description + ", не " + secondDescription;
         }
         return description;
     }

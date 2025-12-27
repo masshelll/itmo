@@ -26,6 +26,7 @@ public class Party {
         if (person.isInParty()) {
             if (crimeOwnLive.isCrime(person)) {
                 baseSuspicion += 10;
+//                System.out.println("Делать что-нибудь в одиночку почти всегда считалось подозрительным");
             }
             person.addSuspicion(baseSuspicion);
             // persons score for crime

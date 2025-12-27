@@ -7,7 +7,7 @@ public class Leg {
 
     public void pulsate(boolean isPulsating) {
         if (isPulsating) {
-            System.out.println("Варикозная язва пульсировала на ноге");
+            System.out.println(", и его варикозная язва пульсировала на ноге.");
         }
     }
 }
