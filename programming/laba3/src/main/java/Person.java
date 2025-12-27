@@ -1,5 +1,6 @@
 import Enum.TimeOfDay;
 import Enum.Time;
+import Enum.CardinalDirection;
 import Error.*;
 
 import java.util.Objects;
@@ -48,7 +49,7 @@ public class Person {
         this.currentPlace.enter(this);
         //pain in leg
         if (distance > 0) {
-            System.out.print(name + " прошагал по " + destination.getName() + " " + distance + " километров");
+            System.out.println(name + " прошагал по " + destination.getName() + " " + distance + " километров");
             if (distance > 2) {
                 body.getLeg().pulsate(true);
             }
@@ -101,6 +102,12 @@ public class Person {
         System.out.println(actionDescription + ".");
     }
 
+    public void wander(CardinalDirection first, CardinalDirection second, CardinalDirection third) {
+        System.out.print("Сперва он пошел в " + first.getTitle() + " направлении, ");
+        System.out.print("потом повернул на " + second.getTitle());
+        System.out.print("потом на " + third.getTitle());
+        System.out.println(", мало заботясь о том, куда он идет.");
+    }
     public void work() {
         System.out.println(name + " работает");
     }

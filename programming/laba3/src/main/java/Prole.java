@@ -22,14 +22,18 @@ public class Prole extends Person{
 
     public void react(Person person) {
         if (Math.random() > 0.5) {
-            System.out.println(getName() + "не обращал никакого внимания на" + person.getName());
+            System.out.println(getName() + "не обращал никакого внимания на " + person.getName());
         } else {
-            System.out.println(getName() + "глядит на" + person.getName() + " осторожным любопытством");
+            System.out.println(getName() + "глядит на " + person.getName() + " осторожным любопытством");
         }
     }
-
+    public String getAppearance() {
+        return getName() + appearance;
+    }
 
     public boolean hasHope() {
         return isHope;
     }
+
+
 }

@@ -18,7 +18,7 @@ public class House extends Place {
     }
 
     public String getDescription() {
-        if (isDestroyed) return "Разрушен";
+        if (isDestroyed) return "Разрушен" + getName();
         return description;
     }
 }

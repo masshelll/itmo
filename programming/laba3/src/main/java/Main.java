@@ -37,12 +37,18 @@ public class Main {
             return;
         }
         winston.aboutPartyRules();
+        OwnLive ownLive = new OwnLive();
+        System.out.println(ownLive.getDefinition());
         Nature nature = new Nature(" воздух", "нежный апрельский");
         Nature sky = new Nature(" небо", " такое голубое, каким он еще не видел его в этом гооду");
         nature.impress(winston);
+        String boringEvening = "Ему вдруг показался невыносимым бесконечный шумный вечер в Общественном Центре \n" +
+                "скучные, утомительные игры, лекции, скрипучее панибратство, подмазанное джином.";
+        winston.think(boringEvening);
         Place busStop = new Place("автобусной остановки", 3, "", CardinalDirection.NORTH);
         Place street = new Place("Лабиринт улиц", 10000, "лондонский", CardinalDirection.NORTH);
-        winston.go(street, 1, false, TimeOfDay.EVENING);
+        winston.go(street, 0, false, TimeOfDay.EVENING);
+        winston.wander(CardinalDirection.SOUTH, CardinalDirection.EAST, CardinalDirection.NORTH);
         //Book
         Book diary = new Book();
         try {
@@ -52,14 +58,19 @@ public class Main {
             System.out.println("Уинстон не смог написать, но запомнил свои мысли");
         }
         Place slum = new Place("Трущобный район", 100, "с маловыразительными домами", CardinalDirection.NORTH);
+        winston.go(slum, 1, false, TimeOfDay.EVENING);
         House destroyedStation = new House("Вокзал Сент-Паекрас", 800, "когда то находился", CardinalDirection.EAST, "серый", true, 1);
+        System.out.println(destroyedStation.getDescription());
         destroyedStation.getDescription();
         //prols
-        Prole girl = new Prole("Девушка ", 19, "грубо накрашенные губы");
-        Prole fatWoman = new Prole("Женщина ", 45, "толстая, красные руки");
-        Prole child = new Prole("Ребенок ", 8, "оборванные, босые");
         Puddle puddle = new Puddle(" грязная лужа");
+        Prole girl = new Prole("Девушка ", 19, "грубо накрашенные губы");
+        Prole guy = new Prole("Парень ", 20, "льнущий к ней");
+        Prole fatWoman = new Prole("Баба ", 45, "толстая, с красными руками, переваливающаяся с ноги на ногу");
+        Prole oldMan = new Prole("Старик ", 70, "шаркающий на неуклюжих ногах");
+        Prole child = new Prole("Ребенок ", 8, "оборванный, босой");
         child.playInPuddle(puddle);
+        System.out.println(guy.getName() + "и " + oldMan.getName() + "были в толпе.");
         fatWoman.speak();
         girl.react(winston);
         child.react(winston);

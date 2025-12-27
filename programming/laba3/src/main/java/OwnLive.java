@@ -8,7 +8,7 @@ public class OwnLive {
     }
 
     public String getDefinition() {
-        return word + "означает" + meaning;
+        return  "Было даже слово на новоязе — " + word + ", что означало " + meaning + ".";
     }
 
     public boolean isCrime(Person person) {
