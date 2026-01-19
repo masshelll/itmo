@@ -84,11 +84,6 @@ public class Main {
 //        Prole oldMan = new Prole("Старик ", 70, "шаркающий на неуклюжих ногах");
 //        Prole child = new Prole("Ребенок ", 8, "оборванный, босой ");
 //        child.playInPuddle(puddle);
-//        guy.beInCrowd();
-//        oldMan.beInCrowd();
-//        fatWoman.speak();
-//        girl.react(winston);
-//        child.react(winston);
 
 
     }
