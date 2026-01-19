@@ -63,18 +63,29 @@ public class Main {
         System.out.println(destroyedStation.getDescription());
         destroyedStation.getDescription();
         //prols
-        Puddle puddle = new Puddle(" грязная лужа");
-        Prole girl = new Prole("Девушка ", 19, "грубо накрашенные губы");
-        Prole guy = new Prole("Парень ", 20, "льнущий к ней");
-        Prole fatWoman = new Prole("Баба ", 45, "толстая, с красными руками, переваливающаяся с ноги на ногу");
-        Prole oldMan = new Prole("Старик ", 70, "шаркающий на неуклюжих ногах");
-        Prole child = new Prole("Ребенок ", 8, "оборванный, босой ");
+        PersonFactory factory = new ProleFactory();
+        Prole girl = factory.createPerson(ProleType.GIRL);
+        Prole fatWoman = factory.createPerson(ProleType.FAT_WOMAN);
+        Prole oldMan = factory.createPerson(ProleType.OLD_MAN);
+        Prole child = factory.createPerson(ProleType.CHILD);
+        Puddle puddle = new Puddle("грязные лужи");
         child.playInPuddle(puddle);
-        guy.beInCrowd();
-        oldMan.beInCrowd();
         fatWoman.speak();
+        oldMan.beInCrowd();
         girl.react(winston);
         child.react(winston);
+        System.out.println(winston);
+//        Prole girl = new Prole("Девушка ", 19, "грубо накрашенные губы");
+//        Prole guy = new Prole("Парень ", 20, "льнущий к ней");
+//        Prole fatWoman = new Prole("Баба ", 45, "толстая, с красными руками, переваливающаяся с ноги на ногу");
+//        Prole oldMan = new Prole("Старик ", 70, "шаркающий на неуклюжих ногах");
+//        Prole child = new Prole("Ребенок ", 8, "оборванный, босой ");
+//        child.playInPuddle(puddle);
+//        guy.beInCrowd();
+//        oldMan.beInCrowd();
+//        fatWoman.speak();
+//        girl.react(winston);
+//        child.react(winston);
 
 
     }

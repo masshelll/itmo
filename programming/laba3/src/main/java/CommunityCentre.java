@@ -21,8 +21,5 @@ public class CommunityCentre extends Place{
         }
     }
 
-//    public familiarity(Food food){
-//
-//    }
 }
 

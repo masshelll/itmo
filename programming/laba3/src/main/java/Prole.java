@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Prole extends Person{
     private boolean isHope;
     private int age;
@@ -6,6 +8,9 @@ public class Prole extends Person{
     public Prole(String name, int age, String appearance) {
         super(name, false);
         this.isHope = true;
+        if (age < 0) {
+            throw new IllegalArgumentException("Возраст не может быть меньше 0");
+        }
         this.age = age;
         this.appearance = appearance;
     }
@@ -22,9 +27,9 @@ public class Prole extends Person{
 
     public void react(Person person) {
         if (Math.random() > 0.5) {
-            System.out.println(getName() + appearance + "не обращал никакого внимания на " + person.getName());
+            System.out.println(getName() + appearance + " не обращал никакого внимания на " + person.getName());
         } else {
-            System.out.println(getName() + appearance + "глядит на " + person.getName() + " осторожным любопытством");
+            System.out.println(getName() + appearance + " глядит на " + person.getName() + " осторожным любопытством");
         }
     }
     public String getAppearance() {
@@ -37,6 +42,5 @@ public class Prole extends Person{
     public boolean hasHope() {
         return isHope;
     }
-
 
 }

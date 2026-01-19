@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import Error.SuspicionException;
 
 public class Party {
     private static Party instance;
@@ -26,7 +27,6 @@ public class Party {
         if (person.isInParty()) {
             if (crimeOwnLive.isCrime(person)) {
                 baseSuspicion += 10;
-//                System.out.println("Делать что-нибудь в одиночку почти всегда считалось подозрительным");
             }
             person.addSuspicion(baseSuspicion);
             // persons score for crime
@@ -45,8 +45,7 @@ public class Party {
     }
 
     private void kill(Person person) {
-        person = null;
-        System.out.println("испарился....");
+        throw new SuspicionException(person.getName() + "распылен");
     }
 
 }

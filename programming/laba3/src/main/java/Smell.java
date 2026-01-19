@@ -6,8 +6,6 @@ public class Smell {
 
     public Smell(String description, int intensity){
         this.description = description;
-        if (intensity > 100) this.intensity = 100;
-        else if (intensity < 0) this.intensity = 0;
         this.intensity = intensity;
         this.secondDescription = null;
     }

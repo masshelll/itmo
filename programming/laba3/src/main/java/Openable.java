@@ -1,5 +1,5 @@
 public interface Openable {
     void open();
-    void close();
+    boolean close(int force);
     boolean isOpen();
 }

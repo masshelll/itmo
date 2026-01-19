@@ -19,4 +19,17 @@ public abstract class Food {
 
     public abstract void consume();
 
+    Food bread = new Food("хлеб") {
+        @Override
+        public void consume() {
+            System.out.println("съесть хлеб");
+        }
+    };
+
+    public record Aaa(String something) {
+        public record Bbb(String somethings) {
+
+        }
+    }
+
 }

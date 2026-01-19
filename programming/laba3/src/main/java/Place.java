@@ -26,9 +26,9 @@ public class Place {
         peopleInPlace.remove(person);
     }
 
-    public boolean isCrowded() {
-        return peopleInPlace.size() > size;
-    }
+//    public boolean isCrowded() {
+//        return peopleInPlace.size() > size;
+//    }
 
     public CardinalDirection getDirection() {
         return direction;

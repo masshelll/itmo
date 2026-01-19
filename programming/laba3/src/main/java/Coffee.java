@@ -27,4 +27,6 @@ public class Coffee extends Food{
     public void consume() {
         System.out.println("Выпит " + this.name + " кофе");
     }
+
+
 }

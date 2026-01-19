@@ -76,9 +76,6 @@ public class Person {
 
     public void addSuspicion(int score) {
         this.suspicionScore += score;
-        if (this.suspicionScore >= 100) {
-            throw new SuspicionException(name + " будет стерт!");
-        }
     }
 
     public void eat(Food food) {
@@ -135,7 +132,6 @@ public class Person {
                 ", inParty=" + inParty +
                 ", isAlone=" + isAlone +
                 ", suspicionScore=" + suspicionScore +
-                ", currentPlace=" + currentPlace.name +
                 '}';
     }
 }
