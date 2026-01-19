@@ -1,4 +1,8 @@
+package Entities;
+
 import Enum.ProleType;
+import Interfaces.PersonFactory;
+
 public class ProleFactory implements PersonFactory {
     @Override
     public Prole createPerson(ProleType type) {

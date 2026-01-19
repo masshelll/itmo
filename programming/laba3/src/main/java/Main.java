@@ -1,5 +1,8 @@
+import Entities.*;
 import Enum.*;
 import Error.*;
+import Interfaces.PersonFactory;
+
 public class Main {
     public static void main(String[] args) {
         //world settings
