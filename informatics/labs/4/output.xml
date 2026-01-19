@@ -1,0 +1,54 @@
+<schedule>
+    <lesson>
+        <title>Алгебра и алгоритмы</title>
+        <format>Практика</format>
+        <teacher>Танченко Юлия Валерьевна</teacher>
+        <place>
+            <adress>Кронверкский пр., д.49, лит.А</adress>
+            <audience>1410</audience>
+        </place>
+        <time>
+            <start>8:10</start>
+            <finish>9:40</finish>
+        </time>
+    </lesson>
+    <lesson>
+        <title>Математический анализ</title>
+        <format>Практика</format>
+        <teacher>Танченко Юлия Валерьевна</teacher>
+        <place>
+            <adress>Кронверкский пр., д.49, лит.А</adress>
+            <audience>1410</audience>
+        </place>
+        <time>
+            <start>9:50</start>
+            <finish>11:20</finish>
+        </time>
+    </lesson>
+    <lesson>
+        <title>Математический анализ</title>
+        <format>Лекция</format>
+        <teacher>Романова Екатерина Владимировна</teacher>
+        <place>
+            <adress>Кронверкский пр., д.49, лит.А</adress>
+            <audience>1405</audience>
+        </place>
+        <time>
+            <start>11:30</start>
+            <finish>13:00</finish>
+        </time>
+    </lesson>
+    <lesson>
+        <title>Алгебра и алгоритмы</title>
+        <format>Лекция</format>
+        <teacher>Попов Антон Игоревич</teacher>
+        <place>
+            <adress>Кронверкский пр., д.49, лит.А</adress>
+            <audience>1405</audience>
+        </place>
+        <time>
+            <start>13:30</start>
+            <finish>15:00</finish>
+        </time>
+    </lesson>
+</schedule>

@@ -1,0 +1,95 @@
+import Enum.*;
+import Error.*;
+import Entities.*;
+import Interfaces.PersonFactory;
+
+public class Main {
+    public static void main(String[] args) {
+        //world settings
+        Party party = Party.getInstance();
+        Person winston = new Person("Уинстон", true);
+        Ministry ministryOfTrue = new Ministry("Министерство", "Министерство правды", 2000, CardinalDirection.NORTH);
+        CommunityCentre centre = new CommunityCentre("Общественный Центр", 500, "шумное место", CardinalDirection.SOUTH);
+        //coffee and memory
+        House house = new House("Дом", 100, "какой то", CardinalDirection.EAST, "", false, 3);
+        Entrance entrance = house.getEntrance();
+        Coffee realCoffe = new Coffee("Настоящий");
+        Coffee victoryCoffe = new Coffee("Победа");
+        Smell coffeeSmell = realCoffe.getSmell();
+        Smell victoryCoffeeSmell = victoryCoffe.getSmell();
+        coffeeSmell.setSecondDescription(victoryCoffeeSmell);
+        entrance.setSmell(coffeeSmell);
+        entrance.spreadSmell();
+        winston.stay();
+        Memory childMemory = new Memory(true, "мир своего детства");
+        winston.remember(childMemory, Time.MOMENT);
+        Door door = entrance.getDoor();
+        entrance.slamDoor(10);
+        Smell smellAfterClose = entrance.getSmell();
+        //walking, pain in leg
+        Place bridge = new Place("мостовым", 3, "", CardinalDirection.WEST);
+        winston.go(bridge, 5, true, TimeOfDay.EVENING);
+        //politics, nature
+        winston.doAction("Второй раз пропускает вечер в Общественном центре");
+        winston.think("Очень опрометчивый поступок, конечно же, кто-нибудь обязательно проверяет посещаемость.");
+        try {
+            party.considerSuspicion(winston, "пропустил вечер", 15);
+        } catch (SuspicionException e) {
+            System.out.println("Пиф-паф");
+            System.out.println("Симуляция закончена.");
+            return;
+        }
+        winston.aboutPartyRules();
+        OwnLive ownLive = new OwnLive();
+        System.out.println(ownLive.getDefinition());
+        Nature nature = new Nature(" воздух", "нежный апрельский");
+        Nature sky = new Nature(" небо", " такое голубое, каким он еще не видел его в этом гооду");
+        nature.impress(winston);
+        String boringEvening = "Ему вдруг показался невыносимым бесконечный шумный вечер в Общественном Центре \n" +
+                "скучные, утомительные игры, лекции, скрипучее панибратство, подмазанное джином.";
+        winston.think(boringEvening);
+        Place busStop = new Place("автобусной остановки", 3, "", CardinalDirection.NORTH);
+        Place street = new Place("Лабиринт улиц", 10000, "лондонский", CardinalDirection.NORTH);
+        winston.go(street, 0, false, TimeOfDay.EVENING);
+        winston.wander(CardinalDirection.SOUTH, CardinalDirection.EAST, CardinalDirection.NORTH);
+        //Book
+        Book diary = new Book();
+        try {
+            winston.writeInBook(diary, "Если есть надежда, то она в пролах");
+        } catch (DiaryException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Уинстон не смог написать, но запомнил свои мысли");
+        }
+        Place slum = new Place("Трущобный район", 100, "с маловыразительными домами", CardinalDirection.NORTH);
+        winston.go(slum, 1, false, TimeOfDay.EVENING);
+        House destroyedStation = new House("Вокзал Сент-Паекрас", 800, "когда то находился", CardinalDirection.EAST, "серый", true, 1);
+        System.out.println(destroyedStation.getDescription());
+        destroyedStation.getDescription();
+        //prols
+        PersonFactory factory = new ProleFactory();
+        Prole girl = factory.createPerson(ProleType.GIRL);
+        Prole fatWoman = factory.createPerson(ProleType.FAT_WOMAN);
+        Prole oldMan = factory.createPerson(ProleType.OLD_MAN);
+        Prole child = factory.createPerson(ProleType.CHILD);
+        Puddle puddle = new Puddle("грязные лужи");
+        child.playInPuddle(puddle);
+        fatWoman.speak();
+        oldMan.beInCrowd();
+        girl.react(winston);
+        child.react(winston);
+        System.out.println(winston);
+//        Prole girl = new Prole("Девушка ", 19, "грубо накрашенные губы");
+//        Prole guy = new Prole("Парень ", 20, "льнущий к ней");
+//        Prole fatWoman = new Prole("Баба ", 45, "толстая, с красными руками, переваливающаяся с ноги на ногу");
+//        Prole oldMan = new Prole("Старик ", 70, "шаркающий на неуклюжих ногах");
+//        Prole child = new Prole("Ребенок ", 8, "оборванный, босой ");
+//        child.playInPuddle(puddle);
+//        guy.beInCrowd();
+//        oldMan.beInCrowd();
+//        fatWoman.speak();
+//        girl.react(winston);
+//        child.react(winston);
+
+
+    }
+}
