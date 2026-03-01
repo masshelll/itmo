@@ -18,6 +18,7 @@ public class Person {
     private Body body;
     private Memory memory;
     private Place currentPlace;
+    private static int population = 0;
 
     public Person(String name, boolean inParty) {
         this.name = name;
@@ -26,6 +27,7 @@ public class Person {
         this.body = new Body();
         this.currentPlace = null;
         this.suspicionScore = 0;
+        population ++;
     }
 
     public String getName() {
@@ -71,14 +73,12 @@ public class Person {
             System.out.println(name + " оказался в " + memory.getDescription());
         }
     }
-
     public void writeInBook(Book book, String text) throws DiaryException {
        if (book == null) {
             throw new DiaryException("Дневника нет");
        }
        book.addContent(text);
     }
-
     public void addSuspicion(int score) {
         this.suspicionScore += score;
     }
@@ -118,6 +118,10 @@ public class Person {
         System.out.println(name + " спит");
     }
 
+    public static int getPopulationCount() {
+        return population;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
@@ -139,4 +143,5 @@ public class Person {
                 ", suspicionScore=" + suspicionScore +
                 '}';
     }
+
 }

@@ -10,11 +10,17 @@ public class Party {
     private List<Ministry> ministries;
     private OwnLive crimeOwnLive;
 
+//    private static String slogan = "Война ";
+//
+//    public static class History{
+//        public void saySlogan() {
+//            System.out.println(slogan);
+//        }
+//    }
     private Party() {
         this.ministries = new ArrayList<>();
         this.crimeOwnLive = new OwnLive();
     }
-
     public static Party getInstance() {
         if (instance == null) {
             instance = new Party();
