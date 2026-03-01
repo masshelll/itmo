@@ -78,6 +78,11 @@ public class Main {
         girl.react(winston);
         child.react(winston);
         System.out.println(winston);
+        System.out.println(winston.hashCode());
+        System.out.println(Prole.getPopulationCount());
+
+//        Party.History history = new Party.History();
+//        history.saySlogan();
 //        Prole girl = new Prole("Девушка ", 19, "грубо накрашенные губы");
 //        Prole guy = new Prole("Парень ", 20, "льнущий к ней");
 //        Prole fatWoman = new Prole("Баба ", 45, "толстая, с красными руками, переваливающаяся с ноги на ногу");

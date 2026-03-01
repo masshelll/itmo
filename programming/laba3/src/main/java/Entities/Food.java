@@ -20,6 +20,17 @@ public abstract class Food {
     }
 
     public abstract void consume();
+//    Food bread = new Food("Хлеб") {
+//        @Override
+//        public void consume() {
+//            System.out.println("Выпечен хлеб");
+//        }
+//    };
+//    public class Water{
+//        public void drink(){
+//            System.out.println("");
+//        }
+//    }
 
 
 }

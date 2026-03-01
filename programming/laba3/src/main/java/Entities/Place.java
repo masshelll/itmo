@@ -19,7 +19,6 @@ public class Place {
         this.direction = direction;
         this.peopleInPlace = new ArrayList<>();
     }
-
     public void enter(Person person) {
         peopleInPlace.add(person);
     }
