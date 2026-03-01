@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef511f9a-578b-4e39-91b0-660feac406d5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../laba3/src/main/java/Entities/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/../laba3/src/main/java/Entities/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../laba3/src/main/java/Entities/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/../laba3/src/main/java/Entities/Party.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../laba3/src/main/java/Entities/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../laba3/src/main/java/Entities/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../laba3/src/main/java/Entities/Place.java" beforeDir="false" afterPath="$PROJECT_DIR$/../laba3/src/main/java/Entities/Place.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../laba3/src/main/java/Interfaces/Openable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../laba3/src/main/java/Interfaces/Openable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../laba3/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../laba3/src/main/java/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="ef511f9a-578b-4e39-91b0-660feac406d5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +20,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "masshelll"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "git@github.com:masshelll/itmo.git",
